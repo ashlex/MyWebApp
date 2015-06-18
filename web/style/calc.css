@@ -1,0 +1,30 @@
+.button {
+    background-color: ghostwhite;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: green;
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: red;
+}
+
+.display {
+    background-color: yellowgreen;
+    text-align: end;
+}
+
+table {
+    border-spacing: 1;
+}
+
+.calc {
+    border: 5px ridge blue;
+    display: inline-block;
+    border-radius: 5px;
+}
