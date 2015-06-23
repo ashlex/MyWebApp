@@ -9,6 +9,9 @@
           <element id="directory" name="classes">
             <element id="module-output" name="MyWebApp" />
           </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="gson-2.3.1" />
+          </element>
         </element>
       </root>
     </artifact>
@@ -409,20 +412,16 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="libraryTable">
+    <library name="gson-2.3.1">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/gson-2.3.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$PROJECT_DIR$/lib/gson-2.3.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES />
+    </library>
   </component>
 </project>
 

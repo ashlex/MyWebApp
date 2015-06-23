@@ -1,16 +1,17 @@
 $(document).ready(function(){
 
-    $(".button:not(#commit)").on("click", function () {
-        var a = $(".display");
-        a.html(a.text() + $(this).text());
-    });
-    $("#commit").on("click", function(){
+    $(".button").on("click", function(){
+        var mydata={action:$(this).attr("action"), value:$(this).attr("value")};
         $.ajax({
             type: "POST",
             url: "\My",
-            data: "value="+$(".display").text(),
-            success: function(msg){
-                alert( "Прибыли данные: " + msg );
+            dataType: 'json',
+            data: mydata,
+            success: function(msg,textStatus){
+                $(".display").text(msg.display)
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown){
+                $(".display").text(textStatus)
             }
         });
     });

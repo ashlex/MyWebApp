@@ -3,6 +3,7 @@
     width: 60px;
     height: 60px;
     text-align: center;
+    font-size: 24pt;
 }
 
 .button:hover {
@@ -17,6 +18,8 @@
 .display {
     background-color: yellowgreen;
     text-align: end;
+    height: 40px;
+    font-size: 24pt;
 }
 
 table {
