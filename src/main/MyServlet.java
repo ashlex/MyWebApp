@@ -1,12 +1,13 @@
 package main;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class MyServlet extends HttpServlet {
 	private final String ATTRIBUTE = "CURRENT_OPERATION";
@@ -15,9 +16,23 @@ public class MyServlet extends HttpServlet {
 		super();
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	@Override
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(true);
-		CurrentOperation currentOperation = (CurrentOperation) session.getAttribute(ATTRIBUTE);
+//		CurrentOperation currentOperation = (CurrentOperation) session.getAttribute(ATTRIBUTE);
+		if(request.getParameterMap().size()==0){
+			response.setContentType("text/html;charset=UTF-8");
+			ServletContext sc = request.getServletContext();
+			request.setAttribute("test","test");
+			RequestDispatcher rd = sc.getRequestDispatcher("/index.jsp");
+			rd.forward(request, response);
+		}
+
+
+
+
+
+		/*
 		String action = request.getParameter("action");
 		String value = request.getParameter("value");
 		String responseString = "";
@@ -78,7 +93,7 @@ public class MyServlet extends HttpServlet {
 		jsonObject.append("position", currentOperation1.getPosition()+"");
 		response.setContentType("application/json;UTF-8");
 		response.getWriter().print(jsonObject.toJSONString());
-
+		*/
 
 		/*
 		{action:added ,value: [1,2,3,4,5,6,7,8,9,0]}
@@ -89,15 +104,6 @@ public class MyServlet extends HttpServlet {
 //		CurrentOperation currentOperation= new CurrentOperation.Builder(2).build();
 
 
-	}
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
-		out.println("<html>");
-		out.println("<body>");
-		out.println("<h1>Hello Servlet Get GET</h1>");
-		out.println("</body>");
-		out.println("</html>");
 	}
 
 }
