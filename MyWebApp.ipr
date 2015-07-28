@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ArtifactManager">
-    <artifact type="exploded-war" name="MyWebApp:war exploded">
+    <artifact type="exploded-war" build-on-make="true" name="MyWebApp:war exploded">
       <output-path>$PROJECT_DIR$/out/artifacts/MyWebApp_war_exploded</output-path>
       <root id="root">
         <element id="javaee-facet-resources" facet="MyWebApp/web/Web" />
         <element id="directory" name="WEB-INF">
           <element id="directory" name="classes">
             <element id="module-output" name="MyWebApp" />
+            <element id="library" level="project" name="junit-4.12-beta-3" />
           </element>
           <element id="directory" name="lib">
             <element id="library" level="project" name="gson-2.3.1" />
+            <element id="library" level="project" name="junit-4.12-beta-3" />
+            <element id="library" level="project" name="hamcrest-core-1.3" />
+            <element id="library" level="project" name="hsqldb" />
+            <element id="library" level="project" name="log4j-api-2.3" />
+            <element id="library" level="project" name="log4j-web-2.3" />
+            <element id="library" level="project" name="antlr-2.7.7" />
           </element>
         </element>
       </root>
@@ -36,6 +43,15 @@
     </annotationProcessing>
   </component>
   <component name="CopyrightManager" default="" />
+  <component name="DataSourceManagerImpl" format="xml" hash="2912098524">
+    <data-source source="LOCAL" name="HSQLDB" uuid="40bcc07f-fbad-4b65-a77e-cebf5b2e4f6f">
+      <driver-ref>hsqldb.embedded</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.hsqldb.jdbc.JDBCDriver</jdbc-driver>
+      <jdbc-url>jdbc:hsqldb:file:$PROJECT_DIR$/src/home/hsqldb/webApp</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
@@ -168,239 +184,6 @@
   <component name="ProjectDictionaryState">
     <dictionary name="Alexej" />
   </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Abstraction issues</id>
-          </State>
-          <State>
-            <id>Android Lint</id>
-          </State>
-          <State>
-            <id>Assignment issues</id>
-          </State>
-          <State>
-            <id>Bean Validation issues</id>
-          </State>
-          <State>
-            <id>CDI(Contexts and Dependency Injection) issues</id>
-          </State>
-          <State>
-            <id>CSS</id>
-          </State>
-          <State>
-            <id>Class metrics</id>
-          </State>
-          <State>
-            <id>Class structure</id>
-          </State>
-          <State>
-            <id>Code style issues</id>
-          </State>
-          <State>
-            <id>CoffeeScript</id>
-          </State>
-          <State>
-            <id>Concurrency annotation issues</id>
-          </State>
-          <State>
-            <id>Control FlowGroovy</id>
-          </State>
-          <State>
-            <id>Control flow issues</id>
-          </State>
-          <State>
-            <id>Control flow issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Cucumber</id>
-          </State>
-          <State>
-            <id>DOM issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Data flow issues</id>
-          </State>
-          <State>
-            <id>Declaration redundancy</id>
-          </State>
-          <State>
-            <id>Dependency issues</id>
-          </State>
-          <State>
-            <id>Encapsulation issues</id>
-          </State>
-          <State>
-            <id>Error handling</id>
-          </State>
-          <State>
-            <id>Error handlingGroovy</id>
-          </State>
-          <State>
-            <id>Error handlingJavaScript</id>
-          </State>
-          <State>
-            <id>Finalization issues</id>
-          </State>
-          <State>
-            <id>FlexUnit inspections</id>
-          </State>
-          <State>
-            <id>FreeMarker inspections</id>
-          </State>
-          <State>
-            <id>General</id>
-          </State>
-          <State>
-            <id>GeneralJavaScript</id>
-          </State>
-          <State>
-            <id>Google Web Toolkit issues</id>
-          </State>
-          <State>
-            <id>Groovy</id>
-          </State>
-          <State>
-            <id>Guice Inspections</id>
-          </State>
-          <State>
-            <id>HTML</id>
-          </State>
-          <State>
-            <id>Imports</id>
-          </State>
-          <State>
-            <id>Inheritance issues</id>
-          </State>
-          <State>
-            <id>Initialization issues</id>
-          </State>
-          <State>
-            <id>Internationalization issues</id>
-          </State>
-          <State>
-            <id>J2ME issues</id>
-          </State>
-          <State>
-            <id>JSP Inspections</id>
-          </State>
-          <State>
-            <id>JUnit issues</id>
-          </State>
-          <State>
-            <id>Java EE issues</id>
-          </State>
-          <State>
-            <id>Java language level migration aids</id>
-          </State>
-          <State>
-            <id>JavaBeans issues</id>
-          </State>
-          <State>
-            <id>JavaScript</id>
-          </State>
-          <State>
-            <id>JavaScript function metricsJavaScript</id>
-          </State>
-          <State>
-            <id>JavaScript validity issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Logging issues</id>
-          </State>
-          <State>
-            <id>Method MetricsGroovy</id>
-          </State>
-          <State>
-            <id>Method metrics</id>
-          </State>
-          <State>
-            <id>Modularization issues</id>
-          </State>
-          <State>
-            <id>Naming conventions</id>
-          </State>
-          <State>
-            <id>Numeric issues</id>
-          </State>
-          <State>
-            <id>Packaging issues</id>
-          </State>
-          <State>
-            <id>Performance issues</id>
-          </State>
-          <State>
-            <id>Plugin DevKit</id>
-          </State>
-          <State>
-            <id>Portability issues</id>
-          </State>
-          <State>
-            <id>Potentially confusing code constructsGroovy</id>
-          </State>
-          <State>
-            <id>Potentially confusing code constructsJavaScript</id>
-          </State>
-          <State>
-            <id>Probable bugs</id>
-          </State>
-          <State>
-            <id>Probable bugsCoffeeScript</id>
-          </State>
-          <State>
-            <id>Probable bugsGroovy</id>
-          </State>
-          <State>
-            <id>Probable bugsJavaScript</id>
-          </State>
-          <State>
-            <id>Properties Files</id>
-          </State>
-          <State>
-            <id>Resource management issues</id>
-          </State>
-          <State>
-            <id>SQL</id>
-          </State>
-          <State>
-            <id>Serialization issues</id>
-          </State>
-          <State>
-            <id>TestNG</id>
-          </State>
-          <State>
-            <id>Threading issues</id>
-          </State>
-          <State>
-            <id>Threading issuesGroovy</id>
-          </State>
-          <State>
-            <id>UI Form Problems</id>
-          </State>
-          <State>
-            <id>Validity issuesGroovy</id>
-          </State>
-          <State>
-            <id>Velocity inspections</id>
-          </State>
-          <State>
-            <id>Visibility issues</id>
-          </State>
-          <State>
-            <id>XPath</id>
-          </State>
-          <State>
-            <id>toString() issues</id>
-          </State>
-        </expanded-state>
-      </profile-state>
-    </entry>
-  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyWebApp.iml" filepath="$PROJECT_DIR$/MyWebApp.iml" />
@@ -413,6 +196,20 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
   <component name="libraryTable">
+    <library name="antlr-2.7.7">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/hibernate/antlr-2.7.7.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/hibernate/dom4j-1.6.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/hibernate/hibernate-commons-annotations-4.0.2.Final.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/hibernate/hibernate-core-4.2.2.Final.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/hibernate/hibernate-jpa-2.0-api-1.0.1.Final.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/hibernate/javassist-3.15.0-GA.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/hibernate/jboss-logging-3.1.0.GA.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/hibernate/jboss-transaction-api_1.1_spec-1.0.1.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
     <library name="gson-2.3.1">
       <CLASSES>
         <root url="jar://$PROJECT_DIR$/lib/gson-2.3.1.jar!/" />
@@ -420,6 +217,42 @@
       <JAVADOC>
         <root url="jar://$PROJECT_DIR$/lib/gson-2.3.1-javadoc.jar!/" />
       </JAVADOC>
+      <SOURCES />
+    </library>
+    <library name="hamcrest-core-1.3">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/hamcrest-core-1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="hsqldb">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/hsqldb.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="junit-4.12-beta-3">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/junit-4.12-beta-3.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="log4j-api-2.3">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/log4j/log4j-api-2.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/log4j/log4j-core-2.3.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="log4j-web-2.3">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/log4j/log4j-web-2.3.jar!/" />
+      </CLASSES>
+      <JAVADOC />
       <SOURCES />
     </library>
   </component>

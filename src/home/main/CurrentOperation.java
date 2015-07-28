@@ -1,4 +1,4 @@
-package main;
+package home.main;
 
 public class CurrentOperation {
 	private final int a;
@@ -21,16 +21,13 @@ public class CurrentOperation {
 		return b;
 	}
 
-	public String getOperator() {
-		return operator;
-	}
 	public int getPosition(){
 		return position;
 	}
 
-	public double runOperation() throws ArithmeticException{
+	public double execOperation(String operation) throws ArithmeticException{
 		double response=0;
-		if ("-".equals(operator)) {
+		if ("-".equals(operation)) {
 			response = a - b;
 
 		} else if ("+".equals(operator)) {
@@ -63,10 +60,6 @@ public class CurrentOperation {
 		}
 		public Builder setB(int b){
 			this.b=b;
-			return this;
-		}
-		public Builder setOperator(String operator){
-			this.operator=operator;
 			return this;
 		}
 		public CurrentOperation build(){

@@ -1,32 +1,68 @@
-package main;
+package home.main;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Enumeration;
 
 public class MyServlet extends HttpServlet {
 	private final String ATTRIBUTE = "CURRENT_OPERATION";
+	IFacade facade;
+	public final Logger LOG= LogManager.getLogger(this.getClass().getName());
 
 	public MyServlet() {
 		super();
+		facade=new IFacade() {
+			@Override
+			public void verificationUser() {
+
+			}
+
+			@Override
+			public IPageDocument getPage(PagesName page) {
+				return null;
+			}
+
+			@Override
+			public void pocessReqest(HttpServletRequest request) {
+
+			}
+		};
+
+	}
+
+	@Override
+	public void init(ServletConfig config) throws ServletException {
+
+		super.init(config);
 	}
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession(true);
+		ServletConfig f=getServletConfig();
+
+		Enumeration<String> str = f.getInitParameterNames();
+		String s="";
+		while((s=str.nextElement())!="")
+			System.out.println(s);
+		LOG.info("test");
+		return;
+//		facade.pocessReqest(request);
+//		HttpSession session = request.getSession(true);
 //		CurrentOperation currentOperation = (CurrentOperation) session.getAttribute(ATTRIBUTE);
-		if(request.getParameterMap().size()==0){
-			response.setContentType("text/html;charset=UTF-8");
-			ServletContext sc = request.getServletContext();
-			request.setAttribute("test","test");
-			RequestDispatcher rd = sc.getRequestDispatcher("/index.jsp");
-			rd.forward(request, response);
-		}
+//		if (request.getParameterMap().size() == 0) {
+//			response.setContentType("text/html;charset=UTF-8");
+//			ServletContext sc = request.getServletContext();
+//			request.setAttribute("test", "test");
+//			RequestDispatcher rd = sc.getRequestDispatcher("/index.jsp");
+//			rd.forward(request, response);
+//		}
 
 
 
@@ -73,7 +109,7 @@ public class MyServlet extends HttpServlet {
 			}
 		} else if ("run".equals(action)) {
 			try {
-				responseString=String.valueOf(currentOperation.runOperation());
+				responseString=String.valueOf(currentOperation.execOperation());
 			}catch (ArithmeticException ae){
 				responseString=ae.getMessage();
 				System.out.print(ae);
