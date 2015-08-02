@@ -43,7 +43,7 @@
     </annotationProcessing>
   </component>
   <component name="CopyrightManager" default="" />
-  <component name="DataSourceManagerImpl" format="xml" hash="2912098524">
+  <component name="DataSourceManagerImpl" format="xml" hash="2051877673">
     <data-source source="LOCAL" name="HSQLDB" uuid="40bcc07f-fbad-4b65-a77e-cebf5b2e4f6f">
       <driver-ref>hsqldb.embedded</driver-ref>
       <synchronize>true</synchronize>
@@ -181,6 +181,16 @@
       </item>
     </group>
   </component>
+  <component name="ProjectCodeStyleSettingsManager">
+    <option name="PER_PROJECT_SETTINGS">
+      <value>
+        <XML>
+          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+        </XML>
+      </value>
+    </option>
+    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default (1)" />
+  </component>
   <component name="ProjectDictionaryState">
     <dictionary name="Alexej" />
   </component>
@@ -194,6 +204,11 @@
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+  </component>
+  <component name="dataSourceStorageLocal">
+    <data-source name="HSQLDB" uuid="40bcc07f-fbad-4b65-a77e-cebf5b2e4f6f">
+      <secret-storage>memory</secret-storage>
+    </data-source>
   </component>
   <component name="libraryTable">
     <library name="antlr-2.7.7">
@@ -257,4 +272,3 @@
     </library>
   </component>
 </project>
-

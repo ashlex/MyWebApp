@@ -3,14 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <filter>
+        <filter-name>testFilter</filter-name>
+        <filter-class>home.main.java.filters.FilterJS</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>testFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
     <servlet>
         <servlet-name>MyServlet</servlet-name>
-        <servlet-class>home.main.MyServlet</servlet-class>
+        <servlet-class>home.main.java.MyServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MyServlet</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/servlet</url-pattern>
     </servlet-mapping>
 
 </web-app>
